@@ -64,11 +64,9 @@ newList.addItem("Call parents")
 newList.removeItem(1);
 // newList.removeItem(4);
 newList.editItem(4,"Listen to music")
-// newList.editItem([0],"Listen music")
-
-// console.log(RenderToDosListTemplate())
 
 newList.seeTheList()
+
 // newList.removeAll()
 // newList.seeTheList()
 newList.renderToDoListTemplate()
