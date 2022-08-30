@@ -31,9 +31,15 @@ class ToDosList {
         return this.toDo.splice(orderNr-1, 1, newValue)
     }
 
-    // editItems(orderNrs, newValues){
-    //     return this.toDo.splice([orderNrs], 1, [newValues])
-    // }
+    updateTheList(orderNr, newValues) {
+        
+        for (let i = 0; i < newValues.length; i++) {
+
+          console.log(`target item index ${orderNr[i] - 1} >> new value ==> ${newValues[i]}`);
+
+          this.toDo[orderNr[i] - 1] = newValues[i];
+        }
+      };
 
 
     seeTheList() {
@@ -66,6 +72,11 @@ newList.removeItem(1);
 newList.editItem(4,"Listen to music")
 
 newList.seeTheList()
+
+newList.updateTheList(
+    [2, 4, 5],
+    ["Meet with PR department", "By milk", "Check the internet connection"]
+  );
 
 // newList.removeAll()
 // newList.seeTheList()
